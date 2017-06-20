@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DF32EE8B661D82D6173358BB /* Pods_sr_mart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A69B1BE39803E368B182668B /* Pods_sr_mart.framework */; };
+		F26522BB1EF91280006962AA /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26522BA1EF91280006962AA /* CustomView.swift */; };
 		F2DFBE4E1EF901ED006AA38A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DFBE4D1EF901ED006AA38A /* AppDelegate.swift */; };
 		F2DFBE501EF901ED006AA38A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DFBE4F1EF901ED006AA38A /* ViewController.swift */; };
 		F2DFBE531EF901ED006AA38A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2DFBE511EF901ED006AA38A /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 		0D707842AF0A4DE078C1E7F4 /* Pods-sr-mart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sr-mart.release.xcconfig"; path = "Pods/Target Support Files/Pods-sr-mart/Pods-sr-mart.release.xcconfig"; sourceTree = "<group>"; };
 		A69B1BE39803E368B182668B /* Pods_sr_mart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sr_mart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1BAD4F12349A4B42CADA5A1 /* Pods-sr-mart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sr-mart.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sr-mart/Pods-sr-mart.debug.xcconfig"; sourceTree = "<group>"; };
+		F26522BA1EF91280006962AA /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		F2DFBE4A1EF901EC006AA38A /* sr-mart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sr-mart.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2DFBE4D1EF901ED006AA38A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2DFBE4F1EF901ED006AA38A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				F2DFBE541EF901ED006AA38A /* Assets.xcassets */,
 				F2DFBE561EF901ED006AA38A /* LaunchScreen.storyboard */,
 				F2DFBE591EF901ED006AA38A /* Info.plist */,
+				F26522BA1EF91280006962AA /* CustomView.swift */,
 			);
 			path = "sr-mart";
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F26522BB1EF91280006962AA /* CustomView.swift in Sources */,
 				F2DFBE501EF901ED006AA38A /* ViewController.swift in Sources */,
 				F2DFBE4E1EF901ED006AA38A /* AppDelegate.swift in Sources */,
 			);
@@ -376,6 +380,7 @@
 				F2DFBE5E1EF901ED006AA38A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
