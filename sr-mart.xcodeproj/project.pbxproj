@@ -14,6 +14,10 @@
 		F2DFBE531EF901ED006AA38A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2DFBE511EF901ED006AA38A /* Main.storyboard */; };
 		F2DFBE551EF901ED006AA38A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2DFBE541EF901ED006AA38A /* Assets.xcassets */; };
 		F2DFBE581EF901ED006AA38A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2DFBE561EF901ED006AA38A /* LaunchScreen.storyboard */; };
+		F2FFD0AC1EF919E4009CC6FB /* customButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FFD0AB1EF919E4009CC6FB /* customButton.swift */; };
+		F2FFD0AE1EF91DBF009CC6FB /* customVFV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FFD0AD1EF91DBF009CC6FB /* customVFV.swift */; };
+		F2FFD0B01EF92584009CC6FB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2FFD0AF1EF92584009CC6FB /* GoogleService-Info.plist */; };
+		F2FFD0B21EF93BDC009CC6FB /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FFD0B11EF93BDC009CC6FB /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		F2DFBE541EF901ED006AA38A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2DFBE571EF901ED006AA38A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F2DFBE591EF901ED006AA38A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2FFD0AB1EF919E4009CC6FB /* customButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customButton.swift; sourceTree = "<group>"; };
+		F2FFD0AD1EF91DBF009CC6FB /* customVFV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customVFV.swift; sourceTree = "<group>"; };
+		F2FFD0AF1EF92584009CC6FB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F2FFD0B11EF93BDC009CC6FB /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,11 +90,15 @@
 			children = (
 				F2DFBE4D1EF901ED006AA38A /* AppDelegate.swift */,
 				F2DFBE4F1EF901ED006AA38A /* ViewController.swift */,
+				F2FFD0B11EF93BDC009CC6FB /* SignUpViewController.swift */,
 				F2DFBE511EF901ED006AA38A /* Main.storyboard */,
 				F2DFBE541EF901ED006AA38A /* Assets.xcassets */,
 				F2DFBE561EF901ED006AA38A /* LaunchScreen.storyboard */,
 				F2DFBE591EF901ED006AA38A /* Info.plist */,
+				F2FFD0AF1EF92584009CC6FB /* GoogleService-Info.plist */,
 				F26522BA1EF91280006962AA /* CustomView.swift */,
+				F2FFD0AB1EF919E4009CC6FB /* customButton.swift */,
+				F2FFD0AD1EF91DBF009CC6FB /* customVFV.swift */,
 			);
 			path = "sr-mart";
 			sourceTree = "<group>";
@@ -154,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2DFBE581EF901ED006AA38A /* LaunchScreen.storyboard in Resources */,
+				F2FFD0B01EF92584009CC6FB /* GoogleService-Info.plist in Resources */,
 				F2DFBE551EF901ED006AA38A /* Assets.xcassets in Resources */,
 				F2DFBE531EF901ED006AA38A /* Main.storyboard in Resources */,
 			);
@@ -214,8 +227,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2FFD0B21EF93BDC009CC6FB /* SignUpViewController.swift in Sources */,
+				F2FFD0AC1EF919E4009CC6FB /* customButton.swift in Sources */,
 				F26522BB1EF91280006962AA /* CustomView.swift in Sources */,
 				F2DFBE501EF901ED006AA38A /* ViewController.swift in Sources */,
+				F2FFD0AE1EF91DBF009CC6FB /* customVFV.swift in Sources */,
 				F2DFBE4E1EF901ED006AA38A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
