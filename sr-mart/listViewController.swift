@@ -79,10 +79,11 @@ class listViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
      let cell = tableView.dequeueReusableCell(withIdentifier: "productCell", for: indexPath) as! productTableViewCell
         
+                                    // Checking data stored
+                                        print("*****ALLData******")
+                                        print(product.allData)
         
-        print("*****ALLData******")
-        print(product.allData)
-        
+        // create individal variable from array
         let image = product.allData[indexPath.row].productImage
         print ("image value = " + image)
 
@@ -92,7 +93,9 @@ class listViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let price = product.allData[indexPath.row].productPrice
         print ("price value = \(price)")
 
-        cell.productLabel.text = String (quantity)
+        
+        // attaching variable to it's respect cell
+        cell.productQuantity.text = String (quantity)
         cell.productPrice.text = String (price)
 //        cell.productImages.image =
         return cell
