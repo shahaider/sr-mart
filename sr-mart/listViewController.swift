@@ -48,23 +48,22 @@ class listViewController: UIViewController, UITableViewDataSource, UITableViewDe
            // check retrieving data
          
             
-            print("*****DATA******")
-            print(fetchData)
+//            print("*****DATA******")
+//            print(fetchData)
 
 //             create related list
             if let actualData = fetchData {
-                print("*****ActualData******")
-                print(actualData)
+//                print("*****ActualData******")
+//                print(actualData)
                 
                 let link = actualData["image"] as! String
-                let quantities = actualData["quantity"] as! String
-                let unitPrice = actualData["price"] as! String
+                let quantities = actualData["quantity"] as! Int
+                let unitPrice = actualData["price"] as! Int
             
-                let productList: product = product(productImage: link, productTitle: quantities, productPrice: unitPrice)
+                let productList: product = product(productImage: link, productQuantity: quantities, productPrice: unitPrice)
                 
                 product.allData.append(productList)
-//                print("*****ALLData******")
-//                print(product.allData)
+//
             }
         })
     }
@@ -80,12 +79,22 @@ class listViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
      let cell = tableView.dequeueReusableCell(withIdentifier: "productCell", for: indexPath) as! productTableViewCell
         
-
-        cell.productLabel.text = product.allData[indexPath.row].productTitle
-//        cell.productPrice.text =
-//        cell.productImages.image =
-        print(cell.productLabel.text)
         
+        print("*****ALLData******")
+        print(product.allData)
+        
+        let image = product.allData[indexPath.row].productImage
+        print ("image value = " + image)
+
+        let quantity = product.allData[indexPath.row].productQuantity
+        print ("quantity value = \(quantity)")
+
+        let price = product.allData[indexPath.row].productPrice
+        print ("price value = \(price)")
+
+        cell.productLabel.text = String (quantity)
+        cell.productPrice.text = String (price)
+//        cell.productImages.image =
         return cell
     }
   

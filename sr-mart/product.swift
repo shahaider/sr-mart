@@ -12,8 +12,8 @@ struct product{
 
     static var allData = [product]()
     var productImage: String
-    var productTitle: String
-    var productPrice: String
+    var productQuantity: Int
+    var productPrice: Int
     
    
 
