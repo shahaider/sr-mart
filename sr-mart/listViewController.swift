@@ -12,10 +12,12 @@ import FirebaseDatabase
 
 class listViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    var checkTable = ["pana","cloud"]
+    var allData = [product]()
+    
     // FIREBASE VARIABLE
 
     
-    //    var allData = [product]()
     var dbRef : DatabaseReference?
     var dbHandle : DatabaseHandle?
 
@@ -27,10 +29,8 @@ class listViewController: UIViewController, UITableViewDataSource, UITableViewDe
     // TABLEVIEW NAME
     @IBOutlet weak var list: UITableView!
     
-    var table = ["shahrukh","hiba"]   // check table
-   
-    
-    
+  
+
     // MAIN FUNCTION
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,8 +63,20 @@ class listViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 let productList: product = product(productImage: link, productQuantity: quantities, productPrice: unitPrice)
                 
                 product.allData.append(productList)
-//
+                self.allData.append(productList)
+                
+                // Checking data stored
+//                print("*****ALLData (check pt 1 inside)******")
+                //                            print(product.allData)
+//                                            print(self.allData)
+
+
             }
+            self.list.reloadData()
+            // Checking data stored
+//                            print("*****ALLData (check pt 1 out)******")
+                            print(product.allData)
+//                            print(self.allData)
         })
     }
   
@@ -75,32 +87,53 @@ class listViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     // defining cell in a row
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-    
-     let cell = tableView.dequeueReusableCell(withIdentifier: "productCell", for: indexPath) as! productTableViewCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "productCell", for: indexPath) as! productTableViewCell
         
-                                    // Checking data stored
-                                        print("*****ALLData******")
-                                        print(product.allData)
-        
+//                        print("*****ALLData (check pt 2)******")
+//                       print(allData)
+
         // create individal variable from array
-        let image = product.allData[indexPath.row].productImage
-        print ("image value = " + image)
-
+//        let image = product.allData[indexPath.row].productImage
+        
         let quantity = product.allData[indexPath.row].productQuantity
-        print ("quantity value = \(quantity)")
-
+        
         let price = product.allData[indexPath.row].productPrice
-        print ("price value = \(price)")
+        
+        cell.productQuantity.text = String(quantity)
+        cell.productPrice.text = String(price)
+        
 
         
-        // attaching variable to it's respect cell
-        cell.productQuantity.text = String (quantity)
-        cell.productPrice.text = String (price)
-//        cell.productImages.image =
+        // import image via url String
+        let imageUrl = URL(string: product.allData[indexPath.row].productImage)
+        let session = URLSession.shared
+//        print("check 1")
+//        print(product.allData[indexPath.row].productImage)
+//        print("check 2")
+//        print(imageUrl)
+        
+        let task = session.dataTask(with: imageUrl!) { (data, response, error) in
+            
+            print (error)
+            if data != nil{
+            
+                DispatchQueue.main.async(execute: { 
+                    cell.productImages.image = UIImage(data: data!)
+
+                })
+            }
+        }
+        task.resume()
+        
         return cell
+        
+        
+    
     }
-  
+    
+    
+    
     @IBAction func signoutButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
 
