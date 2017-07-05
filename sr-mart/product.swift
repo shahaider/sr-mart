@@ -10,7 +10,10 @@ import UIKit
 
 struct product{
 
+    static var selectCat = ""
     static var allData = [product]()
+    static var selectedIndex = 0
+    var productTitle: String
     var productImage: String
     var productQuantity: Int
     var productPrice: Int

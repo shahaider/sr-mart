@@ -24,7 +24,6 @@ class listViewController: UIViewController, UITableViewDataSource, UITableViewDe
   
     // VARIABLE TO SAVE SEGUE PASSED VALUE
     var segueData = ""
-    
    
     // TABLEVIEW NAME
     @IBOutlet weak var list: UITableView!
@@ -37,13 +36,15 @@ class listViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         // CHECK PASSED VALUE
         print(segueData)
-        
+        product.selectCat = segueData
+
         list.delegate = self
         list.dataSource = self
 
         dbRef = Database.database().reference()
         dbHandle = dbRef?.child("inventory").child(segueData).observe(.childAdded, with: { (snapshot) in
             
+            let fetchKey = snapshot.key as? String
             let fetchData = snapshot.value as? [ String : Any ]
            // check retrieving data
          
@@ -55,12 +56,12 @@ class listViewController: UIViewController, UITableViewDataSource, UITableViewDe
             if let actualData = fetchData {
 //                print("*****ActualData******")
 //                print(actualData)
-                
+                let title = fetchKey!.uppercased()
                 let link = actualData["image"] as! String
                 let quantities = actualData["quantity"] as! Int
                 let unitPrice = actualData["price"] as! Int
             
-                let productList: product = product(productImage: link, productQuantity: quantities, productPrice: unitPrice)
+                let productList: product = product(productTitle: title, productImage: link, productQuantity: quantities, productPrice: unitPrice)
                 
                 product.allData.append(productList)
                 self.allData.append(productList)
@@ -100,6 +101,7 @@ class listViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         let price = product.allData[indexPath.row].productPrice
         
+        cell.productTitle.text? = product.allData[indexPath.row].productTitle
         cell.productQuantity.text = String(quantity)
         cell.productPrice.text = String(price)
         
@@ -115,7 +117,9 @@ class listViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         let task = session.dataTask(with: imageUrl!) { (data, response, error) in
             
-            print (error)
+//            print (error)
+            
+            
             if data != nil{
             
                 DispatchQueue.main.async(execute: { 
@@ -138,5 +142,11 @@ class listViewController: UIViewController, UITableViewDataSource, UITableViewDe
         dismiss(animated: true, completion: nil)
 
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+         product.selectedIndex = indexPath.row
+        performSegue(withIdentifier: "orderSegue", sender: self)
+    }
+   
 
 }

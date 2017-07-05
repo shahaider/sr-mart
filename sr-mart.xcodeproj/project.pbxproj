@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		DF32EE8B661D82D6173358BB /* Pods_sr_mart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A69B1BE39803E368B182668B /* Pods_sr_mart.framework */; };
+		F203E4D61F0CE31800E11D43 /* testViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F203E4D51F0CE31800E11D43 /* testViewController.swift */; };
+		F203E4D81F0CFF8B00E11D43 /* orderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F203E4D71F0CFF8B00E11D43 /* orderViewController.swift */; };
 		F26522BB1EF91280006962AA /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26522BA1EF91280006962AA /* CustomView.swift */; };
 		F2DFBE4E1EF901ED006AA38A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DFBE4D1EF901ED006AA38A /* AppDelegate.swift */; };
 		F2DFBE501EF901ED006AA38A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DFBE4F1EF901ED006AA38A /* ViewController.swift */; };
@@ -28,6 +30,8 @@
 		0D707842AF0A4DE078C1E7F4 /* Pods-sr-mart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sr-mart.release.xcconfig"; path = "Pods/Target Support Files/Pods-sr-mart/Pods-sr-mart.release.xcconfig"; sourceTree = "<group>"; };
 		A69B1BE39803E368B182668B /* Pods_sr_mart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sr_mart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1BAD4F12349A4B42CADA5A1 /* Pods-sr-mart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sr-mart.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sr-mart/Pods-sr-mart.debug.xcconfig"; sourceTree = "<group>"; };
+		F203E4D51F0CE31800E11D43 /* testViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = testViewController.swift; sourceTree = "<group>"; };
+		F203E4D71F0CFF8B00E11D43 /* orderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = orderViewController.swift; sourceTree = "<group>"; };
 		F26522BA1EF91280006962AA /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		F2DFBE4A1EF901EC006AA38A /* sr-mart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sr-mart.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2DFBE4D1EF901ED006AA38A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +111,7 @@
 				F26522BA1EF91280006962AA /* CustomView.swift */,
 				F2FFD0AB1EF919E4009CC6FB /* customButton.swift */,
 				F2FFD0AD1EF91DBF009CC6FB /* customVFV.swift */,
+				F203E4D51F0CE31800E11D43 /* testViewController.swift */,
 			);
 			path = "sr-mart";
 			sourceTree = "<group>";
@@ -127,6 +132,7 @@
 				F2FFD0B11EF93BDC009CC6FB /* SignUpViewController.swift */,
 				F2FCCB2B1EFA4E9F00A78D1A /* categoryViewController.swift */,
 				F2FCCB2D1EFA6CCF00A78D1A /* listViewController.swift */,
+				F203E4D71F0CFF8B00E11D43 /* orderViewController.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -258,9 +264,11 @@
 				F2FFD0B21EF93BDC009CC6FB /* SignUpViewController.swift in Sources */,
 				F2FFD0AC1EF919E4009CC6FB /* customButton.swift in Sources */,
 				F26522BB1EF91280006962AA /* CustomView.swift in Sources */,
+				F203E4D61F0CE31800E11D43 /* testViewController.swift in Sources */,
 				F2F6E9AE1EFBD4F50052EBF7 /* product.swift in Sources */,
 				F2DFBE501EF901ED006AA38A /* ViewController.swift in Sources */,
 				F2FFD0AE1EF91DBF009CC6FB /* customVFV.swift in Sources */,
+				F203E4D81F0CFF8B00E11D43 /* orderViewController.swift in Sources */,
 				F2DFBE4E1EF901ED006AA38A /* AppDelegate.swift in Sources */,
 				F2F6E9AC1EFBCBED0052EBF7 /* productTableViewCell.swift in Sources */,
 				F2FCCB2E1EFA6CCF00A78D1A /* listViewController.swift in Sources */,
