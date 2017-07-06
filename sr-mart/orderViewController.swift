@@ -78,7 +78,7 @@ class orderViewController: UIViewController {
        
         print(totalAmount)
         // Create VC
-        let alert = UIAlertController(title: "ORDER DETAIL", message: totalAmount, preferredStyle: .alert)
+        let alert = UIAlertController(title: "ORDER DETAIL", message: "$ "+totalAmount, preferredStyle: .alert)
       
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
             alert.dismiss(animated: true, completion: nil)
